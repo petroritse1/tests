@@ -1,0 +1,56 @@
+ 
+<h2 align="center">Posts</h2>
+
+{% if posts %}
+{% for post in posts %}
+<div  class="card">
+    <div class="imgbx"><img src=""></div>
+    <div class="userdets">
+    <a href="{{ url_for("post",username=post.author.username)}}"><h2>{{ post.author.Username}}</h2></a>
+    </div>
+    <div class="container">
+        {% if current_user.id == post.author.id %}
+        <div class="drop"><button><a href="{{url_for("delete",id=post.author.username)}}">Delete</a></div>
+        
+        {% endif %}
+        <ul>
+            <li >
+                
+            {{ post.body }}<br> <h2>{{ post.Time_stamp}}</h2>
+            </li>
+        </ul>
+        <div class="comment">
+            
+            
+            {% for comment in post.Comment %}
+            
+                    <li>{{ comment.body }} 
+                        {% if current_user.id == comment.writter.id or current_user.id==post.author%}
+                        <small><a href="{{url_for('delete_comment',comment_id=comment.id)}}"><button style="padding-left:100px;">delete</button></a></small></li><br>
+                        {% endif %}
+          
+            {% endfor %}
+           
+        </div>
+    </div><br>
+    {% if current_user %}
+        <div class="form">
+        <form action= "{{ url_for('create_comment',post_id=post.id) }}" method="post">
+            <input placeholder="Comment" type="Text" id="Text" name="Text"/>
+
+            <button>Comment</button>
+    {% endif %}
+    </form>
+        </div>
+</div>
+
+</div>
+<br>
+{% endfor %}
+{% else %}
+<h2> No Post yet!</h2>
+{% endif %}
+
+    
+         
+ 

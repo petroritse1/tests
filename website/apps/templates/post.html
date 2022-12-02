@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+{% block content %} 
+
+{% include '_post.html' %}
+<div class="create" align="center"><button><a href="{{url_for("create")}}">Create</a></div>
+<div class="back"><button><a href="{{url_for("home")}}">Back</a></div>
+{% endblock %}

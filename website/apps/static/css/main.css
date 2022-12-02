@@ -1,0 +1,194 @@
+body {
+    font-family: Poppins  ;
+    
+
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+}
+
+li {
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style: none;
+    display:inline-block;
+}
+span {
+    color:rgb(221, 221, 44)
+    
+}
+a {
+    text-decoration: none;
+}
+h2{
+    color:black;
+    font-weight: bold;
+
+}
+
+
+/* 
+.card{
+    box-shadow: 0 4px 8px 0  rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    max-width:700px;
+    background:rgb(205, 208, 211);
+    position:absolute;
+    justify-content: center;
+    
+    
+   
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0  rgba(0,0,0,0.2);
+
+
+}
+
+.card .container {
+    box-shadow: 0 4px 8px 0  rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    max-width:900px;
+    background:rgb(255, 255, 255);
+    
+} */
+
+
+.card{
+    box-shadow: 0 5px 10px rgba(0,0,0,15);
+    border-radius: 5px;
+    position:relative;
+    width:900px;
+    height:160px;
+    left:150px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: rgb(212, 209, 209);
+    transition:0.3s;
+ 
+}
+
+.card:hover{
+    height:170px;
+}
+
+.card .userdets{
+    position:absolute;
+    left:40px;
+    top:-10px;
+    padding:5px;
+  
+}
+.card h3{
+    position:absolute;
+    top:200px;
+   
+    padding-top:35px;
+    font-size:10px;
+    
+  
+}
+
+.card a h2{
+    font-weight: 100px;
+    color:rgb(87, 83, 85);
+    font-size: 1.25em;
+    font-weight:600;
+    line-height:1.2rem;
+}
+
+.card a{
+    left:10px;
+     
+}
+
+.card .container{
+    background: whitesmoke;
+    width:100% ;
+    height:80px;
+    padding-bottom:10px;
+
+}
+
+
+.card .container ul li{
+    text-align: center;
+    align-items: center;
+    padding:10px;
+}
+.card .container ul li h2{
+    opacity:100px;
+    font-weight: 20px;
+    font-size: 10px;
+    padding-top:20px;
+    position:absolute;
+}
+.card .drop {
+    
+    position:absolute;
+    right:50px;
+    width:15px;
+    height:15px;
+    top:6px;
+
+}
+
+.card .drop button{
+    background:rgb(7, 140, 192);
+    width:55px;
+    height:25px;
+    border-radius:5px;
+    border-style: hidden;
+
+
+}
+.card .drop button{
+    color:aliceblue;
+}
+
+ 
+
+.card .create button{
+    background:rgb(7, 140, 192);
+    width:55px;
+    height:25px;
+    border-radius:5px;
+    border-style: hidden;
+
+
+}  
+
+.card form {
+    position:relative;
+
+}
+
+.card form input{
+    position:absolute;
+    top:-30px;
+    width:800px;
+    height:20px;
+}
+
+.card form button{
+    position:absolute;
+    top:-30px;
+    right:15px;
+    background:rgb(7, 140, 192);
+    width:70px;
+    height:25px;
+    border-radius:5px;
+    border-style: hidden;
+    
+}
+.card .commment{
+    background-color:antiquewhite;
+}

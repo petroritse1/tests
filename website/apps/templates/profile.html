@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 align="center"> {{ current_user}} Posts</h1>
+<button><a href="{{ url_for("create") }} ">Create post</a></button>
+
+
+{% if posts %}
+{% for post in posts %}
+<div  class="card">
+<div>
+    <div class="container">
+<ul>
+    <li>
+        
+    {{ post.body }}<br> {{ post.Time_stamp}}
+    </li><br>
+</ul>
+{% endfor %}
+{% else %}
+<h2> No Post yet!</h2>
+
+</div>
+    
+
+
+{% endif %}
+
+    
+             
+     
+
+
+{% endblock %}

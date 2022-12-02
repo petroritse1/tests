@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block content %}
+<hr>
+
+<div>
+<h2>Register</h2>
+<form action="" method="post" novalidate >
+{{  form.hidden_tag()  }}
+<p>{{ form.Username.label()}}<br>
+{{ form.Username(size=30,placeholder="Username",height=25)}}</p>
+{% for error in form.Username.errors %}
+<span style="color:red;">{{ error }}</span>
+{% endfor %}
+<p>{{ form.Email.label()}}<br>
+{{ form.Email(size=30,placeholder="Email",height=25)}}</p>
+{% for error in form.Email.errors %}
+<span style="color:red;">{{ error }}</span>
+{% endfor %}
+
+<p>{{ form.Password.label()}}<br>
+{{ form.Password(size=35,placeholder="Passsword",height=25)}}</p>
+{% for error in form.Password.errors %}
+<span style="color:red">{{ error }}</span>
+{% endfor %}
+<p>{{ form.Pass.label()}}<br>
+{{ form.Pass(size=35,placeholder="Re-enter Password",height=25)}}</p>
+{% for error in form.Pass.errors %}
+<span style="color:red">{{ error }}</span>
+{% endfor %}
+
+
+{{ form.Submit()}}
+
+</form>
+</div>
+
+{% endblock %}

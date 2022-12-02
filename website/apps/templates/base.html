@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+         
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+        <title> Menscape </title>
+        {% endif %}
+         
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    </head>
+    <body>
+        {% with message = get_flashed_messages() %}
+        {%if message %}
+        {% for msg in message %}
+        <ul><li>{{ msg }}</li></ul>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <nav >
+          
+            
+            <h2> Men<span>scape</span></h2>
+                <ul>
+                    <a href="{{ url_for('view.index')}}"><li>Home</li></a>
+                    
+                     
+                </ul>
+             
+            </nav>
+       
+        {% block content %}
+        {% endblock %}
+    </body>
+     
+
+</html>
